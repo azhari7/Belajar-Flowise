@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  flowise:
+    image: elestio/flowiseai:latest
+    restart: always
+    environment:
+      - PORT=3000
+      - FLOWISE_USERNAME=azhari
+      - FLOWISE_PASSWORD=azhari123
+    ports:
+      - "3965:3000"
+    volumes:
+      - ./.flowise:/root/.flowise
